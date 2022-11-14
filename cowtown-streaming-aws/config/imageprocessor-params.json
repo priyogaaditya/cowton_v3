@@ -1,0 +1,6 @@
+{
+	"s3_bucket" : "cowtown-video-frame",
+	"s3_key_frames_root" : "frames/",
+	"ddb_table" : "EnrichedFrame",
+	"timezone" : "Asia/Jakarta"
+}

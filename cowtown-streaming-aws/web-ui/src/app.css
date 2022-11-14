@@ -1,0 +1,256 @@
+/* 
+Copyright 2017 Amazon.com, Inc. or its affiliates. All Rights Reserved.
+Licensed under the Amazon Software License (the "License"). You may not use this file except in compliance with the License. A copy of the License is located at
+    http://aws.amazon.com/asl/
+or in the "license" file accompanying this file. This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, express or implied. See the License for the specific language governing permissions and limitations under the License.
+ */
+ @charset "UTF-8";
+ @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+ 
+ body {
+   font-family: 'Open Sans', sans-serif;
+   font-weight: 300;
+   line-height: 1.42em;
+   color:#000000;
+   margin: 0;
+ }
+ 
+ .logo{
+   height: 1.6em;
+ }
+ 
+ h1 {
+   text-align: center;
+   line-height: 1.5;
+   color: #000000;
+ }
+ 
+ h2 {
+   font-size:2em; 
+   font-weight: 300;
+   text-align: left;
+   display: block;
+   line-height:1em;
+   color: #000000;
+   margin-top: 0.2em;
+   margin-bottom: 0.8em;
+ }
+
+ @media (max-width: 1024px) {
+   h2 {
+     margin-bottom: 10px !important;
+   }
+  .tb-container {
+    padding: 40px 0 100px !important;
+  }
+  .tb-content-top {
+    margin-bottom: 0 !important;
+  }
+  .outer-grid {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column !important;
+  }
+  .tb-content-flex-left, .tb-content-flex-right {
+    width: 90% !important;
+    padding: 20px !important;
+  }
+  .tb-content-flex-right {
+   order: -2;
+  }
+ }
+
+ .outer-grid {
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: row;
+ }
+ 
+ .inner-grid {
+   display: flex;
+   flex-wrap: wrap;
+   border-radius: 20px;
+   padding: 20px;
+ }
+ 
+ .inner-grid > div {
+   padding: 0 20px;
+   width: 100%;
+ }
+ 
+ /* Background-color of the odd rows */
+ div.inner-grid:nth-child(odd) {
+     background-color: #dedfe2;
+ }
+ 
+ /* Background-color of the even rows */
+ div.inner-grid:nth-child(even) {
+     background-color: #c6c6c6;
+     margin: 20px 0;
+ }
+ 
+ .inner-grid-list{
+   border: 2px dashed;
+ }
+ 
+ .frame-image{
+   width: 100%;
+   display: inline-block;
+   vertical-align: middle;
+ }
+ 
+ .rekog-label-list{
+    display: inline-block;
+    vertical-align: middle; 
+    -webkit-padding-start: 20px;    
+ }
+ .rekog-label-list li{
+    list-style: none;
+}
+ 
+ .container-img {
+    height: auto;
+    text-align: center;  /*align the inline(-block) elements horizontally*/
+    font: 0/0 a;         /* remove the gap between inline(-block) elements */
+    margin: 0 auto;
+    width: 100%;
+    max-width: 500px;
+    max-height: 500px;
+ }
+ 
+ .container:before {    /* create a full-height inline block pseudo=element */
+     content: ' ';
+     vertical-align: middle;  /* vertical alignment of the inline element */
+     height: 100%;
+ }
+ 
+ .container-img:before {    /* create a full-height inline block pseudo=element */
+     content: ' ';
+     display: inline-block;
+     vertical-align: middle;  /* vertical alignment of the inline element */
+     height: 100%;
+ }
+ 
+ /* The switch - the box around the slider */
+ .switch {
+   position: relative;
+   display: inline-block;
+   width: 60px;
+   height: 34px;
+ }
+ 
+ /* Hide default HTML checkbox */
+ .switch input {display:none;}
+ 
+ /* The slider */
+ .slider {
+   position: absolute;
+   cursor: pointer;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: #ccc;
+   -webkit-transition: .4s;
+   transition: .4s;
+ }
+ 
+ .slider:before {
+   position: absolute;
+   content: "";
+   height: 26px;
+   width: 26px;
+   left: 4px;
+   bottom: 4px;
+   background-color: white;
+   -webkit-transition: .4s;
+   transition: .4s;
+ }
+ 
+ input:checked + .slider {
+   background-color: #002bb6;
+ }
+ 
+ input:focus + .slider {
+   box-shadow: 0 0 1px #002bb6;
+ }
+ 
+ input:checked + .slider:before {
+   -webkit-transform: translateX(26px);
+   -ms-transform: translateX(26px);
+   transform: translateX(26px);
+ }
+ 
+ /* Rounded sliders */
+ .slider.round {
+   border-radius: 34px;
+ }
+ 
+ .slider.round:before {
+   border-radius: 50%;
+ }
+ 
+ /* styling */
+ .tb-container {
+   max-width: 1140px;
+   width: 100%;
+   height: 100%;
+   margin: 0 auto;
+   padding: 50px 0 100px;
+ }
+ 
+ .tb-wrapper {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -ms-flex-wrap: wrap;
+       flex-wrap: wrap;
+   -webkit-box-orient: horizontal;
+   -webkit-box-direction: normal;
+       -ms-flex-direction: row;
+           flex-direction: row;
+ }
+ 
+ .tb-header {
+     padding: 20px 0;
+     background-color: white;
+     box-shadow: 0 14px 28px lightgrey;
+     text-align: center;
+ }
+ 
+ .tb-header-wrapper img {
+     width: 100px;
+     height: auto;
+ }
+ 
+ .tb-content-top {
+   margin-bottom: 40px;
+   width: 100%;
+ }
+ 
+ .tb-content-bottom {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -ms-flex-wrap: wrap;
+       flex-wrap: wrap;
+   width: 100%;
+ }
+ 
+ .tb-content-item {
+  text-align: center;
+ }
+
+ .tb-content-flex-left {
+   width: 60%;
+ }
+ .tb-content-flex-right {
+  width: 20%;
+  padding-left: 40px;
+}
+
+ 
+ 
+ 
+ 
+ 
